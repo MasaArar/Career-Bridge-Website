@@ -1,4 +1,4 @@
-##Setting up Google Cloud Platform to use the Gemini API
+###Setting up Google Cloud Platform to use the Gemini API
 
 Please go to the google cloud website: https://cloud.google.com/gcp/ or search google cloud console.
 
