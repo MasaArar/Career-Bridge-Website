@@ -1,4 +1,5 @@
-# Setting up Google Cloud Platform to use the Gemini API
+# Setting up Career Bridge Components
+## Setting up Google Cloud Platform to use the Gemini API
 
 Please go to the google cloud website: https://cloud.google.com/gcp/ or search google cloud console.
 
@@ -6,18 +7,20 @@ Please go to the google cloud website: https://cloud.google.com/gcp/ or search g
 
 Press on “Get started for free”
 
+![image23](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/6baab579-e7ed-4a19-bddf-1bb3713cfcdd)
 
 Please continue with filling out your details, it will ask you for billing information. It will NOT charge you for anything using this project so please follow the instructions carefully.
+
+![image36](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/caad6655-19ee-481a-a4d1-402e1adfbb50)
 
 You can copy what I wrote EXCEPT my name.
 Fill out the payment information. It says that no automatic payments will be made.
 Press on “Start Free”.
 You will then be given a pop up, feel free to fill it up the same way that is provided in the images:
-
-
-
-
-
+![image20](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/1a015a5b-64ba-42f7-8d90-49022bdedf38)
+![image42](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/34a724ff-977f-4bcd-82de-3ebfbacabc06)
+![image34](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/419c6760-dc04-4730-84d6-9501694219bf)
+![image10](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/689cac9f-1b0c-4fdb-ba42-908ef57ab9e1)
 
 After completing it you will be redirected to this page:
 
