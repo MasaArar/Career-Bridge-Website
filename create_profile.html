@@ -1,0 +1,1353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Bridge - Create Profile</title>
+    <!-- Add your stylesheets and other meta tags here -->
+    <script src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js"></script>
+    <script src="db.php"></script>
+
+
+<style>
+    /* Reset styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Header styles */
+
+header {
+  padding: 30px 0;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Main content styles */
+
+main {
+  padding: 30px;
+}
+
+/* Form styles */
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Error message styles */
+
+.error-message {
+  color: #d9534f;
+  font-size: 12px;
+}
+
+/* Modal styles */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-close-button {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding-top: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.modal-button {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Table styles */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+.sign-up-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.sign-up-sign-up {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: rgba(164, 184, 212, 1);
+}
+.sign-up-rectangle475 {
+  top: 85px;
+  left: 83px;
+  width: 1427px;
+  height: 848px;
+  position: absolute;
+  border-radius: 40px;
+}
+.sign-up-text {
+  top: 755px;
+  left: 292px;
+  color: rgba(0, 0, 0, 1);
+  width: 448px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text01 {
+  color: rgba(0, 0, 0, 1);
+}
+.sign-up-text02 {
+  top: 248px;
+  left: 155px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text04 {
+  top: 314px;
+  left: 158px;
+  color: rgb(0, 0, 0);
+  width: 98px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text05 {
+  top: 378px;
+  left: 158px;
+  color: rgb(0, 0, 0);
+  width: 237px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text06 {
+  top: 513px;
+  left: 156px;
+  color: rgb(0, 0, 0);
+  width: 237px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text07 {
+  top: 592px;
+  left: 157px;
+  color: rgb(0, 0, 0);
+  width: 237px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text08 {
+  top: 671px;
+  left: 157px;
+  color: rgba(0, 0, 0, 1);
+  width: 237px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text10 {
+  top: 178px;
+  left: 297px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 36px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-rectangle476 {
+  top: 82px;
+  right: 60px;
+  width: 717px;
+  height: 854px;
+  position: absolute;
+  border-radius: 0 40px 40px 0;
+}
+.sign-up-text12 {
+  top: 591px;
+  left: 849px;
+  color: rgba(255, 255, 255, 1);
+  width: 462px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text13 {
+  font-weight: 700;
+}
+.sign-up-text25 {
+  left: 347px;
+  color: rgb(3, 1, 76);
+  width: 219px;
+  bottom: 127px;
+  height: auto;
+  position: absolute;
+  font-size: 13.9312px;
+  font-style: Regular;
+  text-align: left;
+  font-family: "Open Sans";
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text28 {
+  top: 447px;
+  left: 155px;
+  color: rgba(0, 0, 0, 1);
+  width: 237px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-button {
+  top: 900px;
+  left: 370px;
+  color: rgb(255, 255, 255);
+  width: 177px;
+  height: 52px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgb(27, 122, 168);
+}
+.sign-up-rectangle465 {
+  top: 101px;
+  left: 412px;
+  width: 71px;
+  height: 78px;
+  position: absolute;
+}
+.sign-up-form {
+  width: 341px;
+  height: 344px;
+  display: flex;
+}
+.sign-up-checkbox {
+  top: 760px;
+  left: 252px;
+  position: absolute;
+}
+.sign-up-textinput {
+  top: 666px;
+  left: 355px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+.sign-up-textinput1 {
+  top: 582px;
+  left: 353px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+.sign-up-textinput2 {
+  top: 367px;
+  left: 350px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+.sign-up-textinput3 {
+  top: 433px;
+  left: 351px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+.sign-up-textinput4 {
+  top: 302px;
+  left: 348px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+.sign-up-textinput5 {
+  top: 502px;
+  left: 351px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+.sign-up-textinput6 {
+  top: 360px;
+  left: 375px;
+  width: 410px;
+  height: 50px;
+  position: absolute;
+  border-color: #ffffff;
+  background-color: rgba(216, 214, 214, 0.52);
+}
+@media(max-width: 1200px) {
+  .sign-up-rectangle475 {
+    width: 1045px;
+  }
+  .sign-up-text {
+    top: 757px;
+    left: 278px;
+  }
+  .sign-up-text10 {
+    top: 172px;
+    left: 244px;
+  }
+  .sign-up-rectangle476 {
+    top: 80px;
+    right: 69px;
+    width: 444px;
+  }
+  .sign-up-text25 {
+    left: 304px;
+    color: rgb(3, 1, 76);
+    bottom: 133px;
+    font-size: 13.9312px;
+    font-family: Open Sans;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .sign-up-text26 {
+    color: #03014c;
+    font-weight: 400;
+  }
+  .sign-up-text27 {
+    font-weight: 700;
+  }
+  .sign-up-button {
+    top: 806px;
+    left: 300px;
+  }
+  .sign-up-rectangle465 {
+    top: 99px;
+    left: 349px;
+  }
+  .sign-up-checkbox {
+    top: 764px;
+    left: 244px;
+  }
+  .sign-up-textinput {
+    width: 305px;
+  }
+  .sign-up-textinput1 {
+    width: 306px;
+  }
+  .sign-up-textinput2 {
+    width: 310px;
+  }
+  .sign-up-textinput3 {
+    width: 309px;
+  }
+  .sign-up-textinput4 {
+    width: 313px;
+  }
+  .sign-up-textinput5 {
+    width: 309px;
+  }
+  .sign-up-textinput6 {
+    width: 313px;
+    height: 47px;
+  }
+}
+.centered-heading {
+  text-align: center;
+}
+.button-container {
+padding-top: 20px; /* Adjust the padding as needed */
+  text-align: center;
+}
+.button-container button {
+    width: 500px; /* Adjust width as needed */
+    height:50px;
+  margin: 0 auto;}
+
+  #ocr-results {
+        display: none;
+        text-align: center; /* Align center */
+    }
+
+    #extracted-values-table {
+        display: none;
+        width:25%;
+        margin: 0 auto; /* Center the table */
+        text-align: center; 
+
+    }
+#preloader{
+  background: #ffffff url(public/external/temple-loader.gif) no-repeat center center;
+  background-size: 10%;
+  height: 100vh;
+  width:100%;
+  position:fixed;
+  z-index:100 ;
+}
+</style>
+</head>
+<body> 
+<div id="preloader"></div>
+    <header>
+        <h1>Create Your Profile</h1>
+    </header>
+
+    <main>
+
+
+        <!-- Add content for creating a profile here -->
+
+        <!-- Modal for Terms and Conditions -->
+        <div id="terms-modal">
+            <h2 class="centered-heading">Terms and Conditions</h2>
+            <p>Welcome to Career Bridge! By accessing and using our website, you agree to comply with the following terms and conditions, as well as all applicable laws and regulations. Please read these terms carefully before using Career Bridge.</p>
+            <br>
+
+            <h3 class="centered-heading"> 1. Acceptance of Terms</h3>
+            <p>By accessing Career Bridge, you agree to be bound by these terms and conditions and acknowledge that any use of the website constitutes your acceptance of these terms. If you do not agree to these terms, please refrain from using Career Bridge.</p>
+            <br>
+
+            <h3 class="centered-heading">2. User Accounts</h3>
+            <p>To access certain features of Career Bridge, you may be required to create a user account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.</p>
+            <br>
+
+            <h3 class="centered-heading">3. Use of Content</h3>
+            <p>The content provided on Career Bridge is for informational purposes only and should not be construed as professional advice. We do not guarantee the accuracy, completeness, or reliability of any information provided on the website. Users are encouraged to verify information independently.</p>
+            <br>
+
+            <h3 class="centered-heading">4. Prohibited Activities</h3>
+            <p>Users agree not to engage in any unlawful or prohibited activities while using Career Bridge. This includes, but is not limited to, unauthorized access to the website, data mining, or interference with the website's functionality.</p>
+            <br>
+
+            <h3 class="centered-heading">5. Intellectual Property</h3>
+            <p>All content, trademarks, and logos displayed on Career Bridge are the property of their respective owners and may not be used without permission. Users agree not to reproduce, modify, or distribute any content from Career Bridge without prior consent.</p>
+            <br>
+
+            <h3 class="centered-heading">6. Limitation of Liability</h3>
+            <p>Career Bridge is provided on an "as is" and "as available" basis. We make no warranties regarding the reliability, accuracy, or completeness of the website. We shall not be liable for any damages arising from the use of or inability to use Career Bridge.</p>
+            <br>
+
+            <h3 class="centered-heading">7. Changes to Terms</h3>
+            <p>We reserve the right to update or modify these terms and conditions at any time without prior notice. It is the user's responsibility to review the terms periodically for changes. Continued use of Career Bridge after any modifications to the terms constitutes acceptance of those changes.</p>
+            <br>
+
+            <p style="z-index: 1;">By using Career Bridge, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you do not agree with any part of these terms, please refrain from using Career Bridge.</p>
+          
+            <div class="button-container">
+              <button onclick="showEnrollmentUpload()">Agree and Create Profile</button>
+              <button onclick="window.location.href='homepageNew.html'">Cancel</button>
+            </div>
+          </div>
+
+
+        <!-- Modal for User Information -->
+<div id="user-info-modal" style="display: none;">
+        <div class="sign-up-sign-up">
+          <img
+            alt="Rectangle4751793"
+            src="public/external/rectangle4751793-rl0e-1500w.png"
+            class="sign-up-rectangle475"
+          />
+
+          <span class="sign-up-text02"><span>Firstname:</span></span>
+          <span class="sign-up-text04">Lastname:</span>
+          <span class="sign-up-text05">University:</span>
+          <span class="sign-up-text06">Email:</span>
+          <span class="sign-up-text07">Student ID:</span>
+          <span class="sign-up-text08"><span>Password:</span></span>
+          <img
+            alt="Rectangle4761793"
+            src="public/external/rectangle4761793-00cs-800w.png"
+            class="sign-up-rectangle476"
+          />
+          <span class="sign-up-text12">
+            <span class="sign-up-text13">
+              <span>Unleash Potential.</span>
+              <br />
+              <span>Elevate Success.</span>
+              <br />
+              <span></span>
+              <br />
+              <span></span>
+            </span>
+            <span>
+              <span>
+                an empowering step towards unlocking a world of opportunities,
+                mentorship, and skill enhancement tailored to your professional
+                aspirations.
+              </span>
+              <br />
+              <span></span>
+            </span>
+          </span>
+          <span class="sign-up-text25">
+            <span class="sign-up-text26">Have an account ?</span>
+            <a href="login.html" class="sign-up-text27" style="color: black;"><strong>Log In</strong></a>
+
+          </span>
+          <span class="sign-up-text28"><span>Phone Number:</span></span>
+          
+          <img
+            alt="Rectangle4652432"
+            src="public/external/rectangle4652432-4dl-200w.png"
+            class="sign-up-rectangle465"
+          />
+          <form class="sign-up-form"></form>
+          <input
+          id="password"
+            type="password"
+            required="true"
+            placeholder="Enter your password"
+            class="sign-up-textinput input"
+          />
+
+          <input
+          id="student-id"
+            type="number"
+            required="true"
+            placeholder="Enter your student ID"
+            class="sign-up-textinput1 input"
+          />
+
+          <input
+          id="university-name"
+            type="text"
+            required="true"
+            placeholder="Enter your university "
+            class="sign-up-textinput2 input"
+          />
+
+          <input
+             id="phone"
+            type="tel"
+            required="true"
+            placeholder="Enter your phone number"
+            class="sign-up-textinput3 input"
+          />
+
+          <input
+          id="last-name"
+            type="text"
+            required="true"
+            placeholder="Enter your last name"
+            class="sign-up-textinput4 input"
+          />
+
+          <input
+          id="email"
+            type="email"
+            required="true"
+            placeholder="Enter your  email address"
+            class="sign-up-textinput5 input"
+          />
+
+        </div>
+        <input
+            id="first-name"
+          type="text"
+          required="true"
+          placeholder="Enter your first name"
+          class="sign-up-textinput6 input"
+        />
+        <button class="sign-up-button button" onclick="validateAndNext()">Next</button>
+        <span id="password-error" class="error-message"></span>
+        <span id="student-id-error" class="error-message"></span>
+        <span id="university-name-error" class="error-message"></span>
+        <span id="phone-error" class="error-message"></span>
+        <span id="last-name-error" class="error-message"></span>
+        <span id="email-error" class="error-message"></span>
+        <span id="first-name-error" class="error-message"></span>
+
+
+        <span id="error-message" class="error-message" style="display: none;"></span>
+
+
+        <br>
+        <br>
+        <button class="sign-up-button button" onclick="validateAndNext()">Next</button>
+        
+
+
+
+      </div>
+      
+
+    </div>
+
+<div id="enrollment-upload-modal" style="display: none;">
+    <h2>Upload Your Enrollment Record</h2>
+    <form>
+        <label for="enrollment-upload">Select an image file:</label>
+        <input type="file" id="enrollment-upload" name="enrollment-upload" accept="image/*">
+        <br>
+        <button type="button" onclick="uploadEnrollment();extract()">Upload</button>
+    </form>
+    <img id="uploaded-img" alt="Uploaded Image" style="display: none;">
+  </div>
+
+<div id="ocr-results">
+    <h2>OCR Results</h2>
+    <textarea id="ocr-text"></textarea>
+    <table id="extracted-values-table" border="0">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Session</th>
+                <th>Campus/Delivery</th>
+                <th>Subject Code</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button onclick="showUserInfo()">Confirm Information</button>
+</div>
+
+    
+        
+        <div id="project-modal" style="display: none;">
+            <div id="project-details">
+                <div id="project-sections">
+                </div>
+                <button id="add-project-button" onclick="addProjects()">Add +</button>
+                <br>
+            </div>
+        
+            <form id="project-tables" style="display: none;">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Project Title</th>
+                            <th>Project Description</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </form>
+            <button type="button" onclick="submitProject()">Submit Project</button>
+            <button onclick="handleProjects()">Next</button>
+        </div>
+        
+        
+        
+
+        <div id="certifications-modal" style="display: none;">
+            <h2>Certifications</h2>
+            <label for="has-certifications">Do you have certifications?</label>
+            <select id="has-certifications" onchange="toggleCertificationDetails()">
+                <option value="select">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <div id="certification-details" style="display: none;">
+                <div id="certification-sections">
+                </div>
+                <button id="add-certification-button" onclick="addCertificationSection()">Add +</button>
+                <br>
+            </div>
+            <button onclick="handleCertifications()">Next</button>
+
+        </div>
+        
+        <div id="certifications-table" style="display: none;">
+            <h3>Is the information correct?</h3>
+            <table id="certification-table" border="1">
+                
+                <thead>
+                    <tr>
+                        <th>Certification Name</th>
+                        <th>Date Acquired</th>
+                        <th>Institution</th>
+                        <th>Credly Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button onclick="confirmCertifications()">Confirm</button>
+        </div>
+
+
+
+        <div id="past-experience-modal" style="display: none;">
+            <h2>Past Experience</h2>
+            <label for="has-past-experience">Do you have past experience?</label>
+            <select id="has-past-experience" onchange="togglePastExperienceDetails()">
+                <option value="select">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <div id="past-experience-details" style="display: none;">
+                <div id="past-experience-sections">
+                </div>
+                <button onclick="addPastExperienceSection()">Add +</button>
+                <br>
+                
+            </div>
+            <button onclick="handlePastExperience()">Next</button>
+        </div>
+
+
+        <div id="past-experience-table-container" style="display: none;">
+            <h3>Is the past experience information correct?</h3>
+            <table id="past-experience-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button onclick="confirmPastExperience()">Create Account</button>
+        </div>
+    </main>
+
+
+    <script src="source.js"></script>
+    <script src="db.js"></script>
+
+    <script>
+        
+
+    function submitUserInfo() {
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const universityName = document.getElementById('university-name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const studentId = document.getElementById('student-id').value;
+        const password = document.getElementById('password').value;
+
+        const userData = {
+            firstName: firstName,
+            lastName: lastName,
+            universityName: universityName,
+            phone: phone,
+            email: email,
+            studentId: studentId,
+            password: password
+        };
+
+        fetch('/submitUserInfo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                
+                console.log('User information submitted successfully');
+            } else {
+                // Display error message to the user
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = data.message;
+                errorMessage.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting user information:', error);
+            
+        });
+    }
+
+        
+      const projectArray = [];
+
+      
+     
+      function addProjects() {
+        console.log("in add projects function");
+
+        const projectSections = document.getElementById('project-sections');
+
+    
+        const newProjectSection = document.createElement('div');
+        newProjectSection.classList.add('project-section');
+
+      
+        newProjectSection.innerHTML = `
+            <form class="project-form">
+                <label for="project-title">Project Title:</label>
+                <input type="text" class="project-title" name="project-title">
+            
+                <label for="project-description">Project Description:</label>
+                <textarea class="project-description" name="project-description"></textarea>
+            
+            </form>
+            <button onclick="deleteProjectSection(this)">Delete</button>
+        `;
+
+        projectSections.appendChild(newProjectSection);
+      }
+
+    function deleteProjectSection(button) {
+        const projectSection = button.parentNode;
+        projectSection.parentNode.removeChild(projectSection);
+    }
+
+    function handleProjects() {
+      console.log("in handle projects function");
+    const projectSections = document.getElementsByClassName('project-section');
+    const projectTable = document.getElementById('project-tables'); // Corrected ID
+    const projectTableBody = projectTable.getElementsByTagName('tbody')[0];
+
+    projectTableBody.innerHTML = '';
+
+    for (let i = 0; i < projectSections.length; i++) {
+        const projectSection = projectSections[i];
+
+        const projectTitle = projectSection.querySelector('.project-title').value;
+        const projectDetails = projectSection.querySelector('.project-description').value;
+
+        if (!projectTitle || !projectDetails) {
+            alert('Please fill in all required fields for the project.');
+            return;
+        }
+
+        const project = {
+            title: projectTitle,
+            description: projectDetails
+        };
+
+      
+        projectArray.push(project);
+
+        const newRow = projectTableBody.insertRow();
+        const titleCell = newRow.insertCell(0);
+        const descriptionCell = newRow.insertCell(1);
+
+        titleCell.textContent = project.title;
+        descriptionCell.textContent = project.description;
+    }
+
+    projectTable.style.display = 'block';
+}
+
+function submitProject() {
+    document.getElementById('project-modal').style.display = 'none';
+    document.getElementById('certifications-modal').style.display = 'block';
+    console.log(projectArray);
+    console.log("in handle submet project function");
+
+    if (projectArray.length === 0) {
+        alert('No projects to submit.');
+        return;
+    }
+
+    fetch('/create_profile', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ projects: projectArray }),
+    })
+    .catch(error => {
+        console.error('Error submitting projects:', error.message);
+        alert('Failed to submit projects to the server. Please try again later.');
+    });
+}
+
+
+function confirmProjects() {
+ 
+    document.getElementById('project-modal').style.display = 'none';
+    document.getElementById('project-tables').style.display = 'none';
+
+}
+
+
+
+function confirmCertifications() {
+    const certificationsTable = document.getElementById('certifications-table');
+
+   
+    
+    document.getElementById('certifications-modal').style.display = 'none';
+    document.getElementById('certifications-table').style.display = 'none';
+    document.getElementById('past-experience-modal').style.display = 'block';
+    
+}
+        
+
+    function togglePastExperienceDetails() {
+        const pastExperienceDetails = document.getElementById('past-experience-details');
+        const hasPastExperience = document.getElementById('has-past-experience').value;
+        const addButton = document.getElementById('addPastExperienceSection');
+        const nextButton = document.getElementById('handlePastExperience');
+
+        if (hasPastExperience === 'yes') {
+            pastExperienceDetails.style.display = 'block';
+            addButton.style.display = 'block';
+        } else {
+            pastExperienceDetails.style.display = 'none';
+            addButton.style.display = 'none';
+            nextButton.style.display = 'block';
+        }
+        
+    }
+
+    
+    const certificationsArray = [];
+
+    function toggleCertificationDetails() {
+        const certificationDetails = document.getElementById('certification-details');
+        const hasCertifications = document.getElementById('has-certifications').value;
+        const addButton = document.getElementById('add-certification-button');
+
+        if (hasCertifications === 'yes') {
+            certificationDetails.style.display = 'block';
+            addButton.style.display = 'block';
+        } else {
+            certificationDetails.style.display = 'none';
+            addButton.style.display = 'none'; 
+        }            
+    }
+
+    function addCertificationSection() {
+    const certificationSections = document.getElementById('certification-sections');
+
+
+    const newCertificationSection = document.createElement('div');
+    newCertificationSection.classList.add('certification-section');
+
+
+    newCertificationSection.innerHTML = `
+        <label for="certification-name">Certification Name:</label>
+        <input type="text" class="certification-name">
+        <br>
+        <label for="date-acquired">Date Acquired: (Format: YYYY/MM/DD)</label>
+        <input type="text" class="date-acquired">
+        <br>
+        <label for="institution">Institution:</label>
+        <input type="text" class="institution">
+        <br>
+        <label for="credly-link">Credly Link:</label>
+        <input type="text" class="credly-link">
+        <br>
+        <button onclick="deleteCertificationSection(this)">Delete</button>
+    `;
+
+    
+    certificationSections.appendChild(newCertificationSection);
+}
+
+function deleteCertificationSection(button) {
+    const certificationSection = button.parentNode;
+    certificationSection.parentNode.removeChild(certificationSection);
+}
+
+function handleCertifications() {
+    const certificationSections = document.getElementsByClassName('certification-section');
+    const certificationsTable = document.getElementById('certifications-table');
+    const certificationsTableBody = certificationsTable.getElementsByTagName('tbody')[0];
+
+     certificationsTableBody.innerHTML = '';
+
+   
+    for (let i = 0; i < certificationSections.length; i++) {
+        const certificationSection = certificationSections[i];
+
+        
+        const certificationName = certificationSection.querySelector('.certification-name').value;
+        const dateAcquired = certificationSection.querySelector('.date-acquired').value;
+        const institution = certificationSection.querySelector('.institution').value;
+        const credlyLink = certificationSection.querySelector('.credly-link').value;
+
+        
+        if (!certificationName || !dateAcquired || !institution) {
+            alert('Please fill in all required fields for certification.');
+            return;
+        }
+
+        
+        const certification = {
+            name: certificationName,
+            acquired: dateAcquired,
+            institution: institution,
+            credlyLink: credlyLink
+        };
+
+       
+        certificationsArray.push(certification);
+
+      
+        const newRow = certificationsTableBody.insertRow();
+        const nameCell = newRow.insertCell(0);
+        const acquiredCell = newRow.insertCell(1);
+        const institutionCell = newRow.insertCell(2);
+        const credlyLinkCell = newRow.insertCell(3);
+
+        nameCell.textContent = certification.name;
+        acquiredCell.textContent = certification.acquired;
+        institutionCell.textContent = certification.institution;
+        credlyLinkCell.textContent = certification.credlyLink || ''; 
+    }
+
+    certificationsTable.style.display = 'block';
+}
+    
+
+
+function confirmCertifications() {
+    const certificationsTable = document.getElementById('certifications-table');
+
+    
+    document.getElementById('certifications-modal').style.display = 'none';
+    document.getElementById('certifications-table').style.display = 'none';
+    document.getElementById('past-experience-modal').style.display = 'block';
+
+    if (certificationsArray.length === 0) {
+        alert('No certifications to submit.');
+        return;
+    }
+
+    fetch('/submit-certifications', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ certifications: certificationsArray }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to submit certifications to the database.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert('Certifications submitted successfully.');
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+        alert('Error submitting certifications to the database.');
+    });
+    
+}
+          
+
+function togglePastExperienceDetails() {
+    const pastExperienceDetails = document.getElementById('past-experience-details');
+    const hasPastExperience = document.getElementById('has-past-experience').value;
+    const addButton = document.getElementById('addPastExperienceSection');
+    const nextButton = document.getElementById('handlePastExperience');
+    const pastExperienceTableContainer = document.getElementById('past-experience-table-container'); // Define the container
+
+    if (hasPastExperience === 'yes') {
+        pastExperienceDetails.style.display = 'block';
+        addButton.style.display = 'block';
+    } else {
+        pastExperienceDetails.style.display = 'none';
+        addButton.style.display = 'none';
+        nextButton.style.display = 'block';
+    }
+}
+
+
+function addPastExperienceSection() {
+    const pastExperienceSections = document.getElementById('past-experience-sections');
+
+    const newPastExperienceSection = document.createElement('div');
+    newPastExperienceSection.classList.add('past-experience-section');
+
+   
+    newPastExperienceSection.innerHTML = `
+        <label for="job-title">Job Title:</label>
+        <input type="text" class="job-title">
+        <br>
+        <label for="company">Company:</label>
+        <input type="text" class="company">
+        <br>
+        <label for="start-date">Start Date:</label>
+        <input type="text" class="start-date">
+        <br>
+        <label for="end-date">End Date:</label>
+        <input type="text" class="end-date">
+        <br>
+        <button onclick="deletePastExperienceSection(this)">Delete</button>
+    `;
+
+    pastExperienceSections.appendChild(newPastExperienceSection);
+}
+
+function deletePastExperienceSection(button) {
+    const pastExperienceSection = button.parentNode;
+    pastExperienceSection.parentNode.removeChild(pastExperienceSection);
+}
+
+const pastExperienceArray = [];
+
+function handlePastExperience() {
+    const pastExperienceSections = document.getElementsByClassName('past-experience-section');
+    const pastExperienceTable = document.getElementById('past-experience-table');
+    const pastExperienceTableBody = pastExperienceTable.getElementsByTagName('tbody')[0];
+    const pastExperienceTableContainer = document.getElementById('past-experience-table-container'); // Define the container
+
+    pastExperienceTableBody.innerHTML = '';
+
+    for (let i = 0; i < pastExperienceSections.length; i++) {
+        const pastExperienceSection = pastExperienceSections[i];
+
+        const jobTitle = pastExperienceSection.querySelector('.job-title').value;
+        const company = pastExperienceSection.querySelector('.company').value;
+        const startDate = pastExperienceSection.querySelector('.start-date').value;
+        const endDate = pastExperienceSection.querySelector('.end-date').value;
+
+        const pastExperience = {
+            jobTitle: jobTitle,
+            company: company,
+            startDate: startDate,
+            endDate: endDate
+        };
+        pastExperienceArray.push(pastExperience);
+
+        const newRow = pastExperienceTableBody.insertRow();
+        const jobTitleCell = newRow.insertCell(0);
+        const companyCell = newRow.insertCell(1);
+        const startDateCell = newRow.insertCell(2);
+        const endDateCell = newRow.insertCell(3);
+
+        jobTitleCell.textContent = pastExperience.jobTitle;
+        companyCell.textContent = pastExperience.company;
+        startDateCell.textContent = pastExperience.startDate;
+        endDateCell.textContent = pastExperience.endDate || ''; 
+    }
+
+    pastExperienceTableContainer.style.display = 'block';
+}
+
+function confirmPastExperience() {
+    fetch('/submit-past-experience', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pastExperiences: pastExperienceArray }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to submit past experience to the database.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert('Past experience submitted successfully.');
+        window.location.href = 'login.html';
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+        alert('Error submitting past experience to the database.');
+    });
+
+    window.location.href = 'login.html';
+
+    console.log("Confirmed, Profile created");
+
+}
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+})
+
+
+
+
+    
+   
+
+
+    </script>
+
+</body>
+</html>

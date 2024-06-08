@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications Recommended For You</title>
+  <style>
+    body {
+      background-color: #e0f2ff;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0; 
+      padding: 2rem; 
+    }
+
+    .certification-container {
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: space-around; 
+      width: 100%; 
+    }
+
+    .certification-box {
+      background-color: #a9cfee;
+      border-radius: 5px;
+      padding: 1.5rem;
+      margin: 1rem;
+      width: 28%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-in-out; 
+      opacity: 1;
+    }
+
+   
+    .certification-box.completed {
+      opacity: 0;
+    }
+
+    
+    .certification-title {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    
+    .certification-desc {
+      line-height: 1.2;
+      color: #666;
+    }
+
+    .certification-details {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .certification-complete {
+      display: flex;
+      align-items: center;
+    }
+
+    .certification-complete input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Certifications Recommended For You</h1>
+  <div class="certification-container">
+    <div class="certification-box" id="cert1">
+      <h3 class="certification-title">Financial Markets</h3>
+      <p class="certification-provider">Offered by Yale University</p>
+      <p class="certification-desc">Explore Risk Management, Finance, And Leadership For Societal Betterment In Dynamic Industries.</p>
+      <p class="certification-completion">Estimated Completion: 2 hours</p>
+      <div class="certification-complete">
+        <input type="checkbox" id="checkbox1" onclick="toggleBox('cert1')">
+        <label for="checkbox1">Status: Achieved</label>
+      </div>
+    </div>
+    <div class="certification-box" id="cert2">
+      <h3 class="certification-title">Entrepreneurship Specialization</h3>
+      <p class="certification-provider">Offered by Harvard University</p>
+      <p class="certification-desc">Advance Expertise, Learn From Experts, Master Skills, And Earn A Career Certificate.</p>
+      <p class="certification-completion">Estimated Completion: 2 hours</p>
+      <div class="certification-complete">
+        <input type="checkbox" id="checkbox2" onclick="toggleBox('cert2')">
+        <label for="checkbox2">Status: Achieved</label>
+      </div>
+    </div>
+    <div class="certification-box" id="cert3">
+        <h3>Certification Title: Data Science</h3>
+        <p class="certification-provider">Offered by UNKNOWN Institution</p>
+        <p class="certification-desc">Advance Expertise, Learn From Experts, Master Skills...</p>
+        <p class="certification-completion">Estimated Completion: 2 hours</p>
+        <div class="certification-complete">
+          <input type="checkbox" id="checkbox3" onclick="toggleBox('cert3')"> <label for="checkbox3">Status: Achieved</label>
+        </div>
+      </div>
+    </div>
+
+        <script>
+             function toggleBox(boxId) {
+                const certBox = document.getElementById(boxId);
+
+                const checkbox = document.querySelector(`#${boxId} input[type="checkbox"]`);
+
+                if (checkbox) {
+                    if (checkbox.checked) {
+                    certBox.classList.add('completed');
+                    } else {
+                    certBox.classList.remove('completed');
+                    }
+                } else {
+                    console.error("Checkbox element not found for", boxId);
+                }
+                }
+
+            </script>
+</body>
+</html>

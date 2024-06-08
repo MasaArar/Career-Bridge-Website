@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Forgot Password</h2>
+        <p>Please enter your student ID below. We will send a reset code to your email.</p>
+        <div id="forgot-password-form">
+            <input type="text" id="studentId" placeholder="Enter Student ID">
+            <button onclick="sendResetCode()">Send Reset Code</button>
+        </div>
+        <div id="reset-code-form" style="display: none;">
+            <input type="text" id="resetCode" placeholder="Enter Reset Code">
+            <button onclick="verifyResetCode()">Verify Code</button>
+        </div>
+        <div id="reset-password-form" style="display: none;">
+            <input type="password" id="newPassword" placeholder="Enter New Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm New Password">
+            <button onclick="resetPassword()">Reset Password</button>
+        </div>
+    </div>
+
+    <script>
+        
+        function sendResetCode() {
+            const studentId = document.getElementById('studentId').value;
+           
+            console.log("entered send reset code  ");
+
+            fetch('/send_reset_code', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ studentId: studentId }),
+                
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                alert('Reset code sent successfully to your email.');
+                
+                document.getElementById('forgot-password-form').style.display = 'none';
+                document.getElementById('reset-code-form').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error.message);
+                alert('Failed to send reset code. Please try again later.');
+            });
+        document.getElementById('forgot-password-form').style.display = 'none';
+        document.getElementById('reset-code-form').style.display = 'block';
+        }
+
+
+
+function verifyResetCode() {
+         console.log("entered verify client side reset code ");
+
+        const resetcode = document.getElementById('resetCode').value;
+        console.log('Reset code entered by user:', resetcode);
+
+        fetch('/verify_reset_code', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ otp: resetcode }),
+})
+.then(response => {
+    if (response.ok) {
+       
+        alert('Reset code verified successfully.');
+        console.log('verfication done');
+
+        
+        document.getElementById('reset-code-form').style.display = 'none';
+       
+        document.getElementById('reset-password-form').style.display = 'block';
+         showResetPasswordForm();
+    } else {
+        
+        response.json().then(data => {
+            alert('Failed to verify reset code. Please try again. Error: ' + data.error);
+        }).catch(error => {
+            console.error('Error parsing response:', error);
+            alert('Failed to verify reset code. Please try again.');
+        });
+    }
+})
+
+}
+function resetPassword() {
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    console.log("Entered reset password function");
+    console.log('New Password:', newPassword);
+    console.log('Confirm Password:', confirmPassword);
+    
+    if (newPassword !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
+    }
+
+
+    const studentIdValue = document.getElementById('studentId').value;
+
+    
+    fetch('/reset_password', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ studentId: studentIdValue, newPassword: newPassword }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        alert('Password reset successfully.');
+        
+        window.location.href = '/login';
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+        alert('Failed to reset password. Please try again later.');
+    });
+}
+
+
+
+
+    </script>
+</body>
+</html>

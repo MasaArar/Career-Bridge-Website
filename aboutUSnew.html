@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+<style>
+
+
+#preloader{
+  background: #ffffff url(public/external/temple-loader.gif) no-repeat center center;
+  background-size: 10%;
+  height: 100vh;
+  width:100%;
+  position:fixed;
+  z-index:100 ;
+}
+/*NAVIGATION */ 
+#menu {
+   
+   background: #ffffff;
+   height: 62px;
+   padding: 0 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   font-style: Regular;
+   font-family: Inter;
+
+   }
+
+
+   #menu ul, #menu li {
+     margin: 0 auto;
+     padding: 0;
+     list-style: none
+     
+   }
+   #menu ul {
+       list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   }
+   #menu li {
+       margin-right: 20px;
+   border-right: 1px solid #ccc; /* Add a right border to create dividers */
+   padding-right: 10px; /* Add padding to space out the links */
+
+
+   }
+
+   #menu li:last-child {
+   border-right: none; /* Remove border from the last link */
+}
+
+
+
+   #menu a {
+       text-decoration: none;
+   color: #333;
+   font-size: 16px;
+   font-weight: bold;
+   position: relative;
+   overflow: hidden;
+   }
+   #menu a.dropdown-arrow:after {
+     content: "\25BE";
+     margin-left: 5px;
+   }
+
+
+   
+#menu a:hover::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(240, 240, 240, 0.5);
+   z-index: -1;
+   transition: transform 0.3s ease;
+   transform: scaleX(0);
+   transform-origin: left;
+}
+
+/*
+   #menu li a:hover {
+       color: #6754e2;
+
+   } */
+
+   #menu input {
+     display: none;
+     margin: 0;
+     padding: 0;
+     height: 62px;
+     width: 100%;
+     opacity: 0;
+     cursor: pointer
+   }
+
+   #menu .logo img {
+       margin-left: 40px;
+   height: 65px;
+   width: auto;}
+
+   #menu label {
+     display: none;
+     line-height: 62px;
+     text-align: center;
+     position: absolute;
+     left: 35px
+   }
+   #menu label:before {
+     font-size: 1.6em;
+     color: #000000;
+     content: "\2261"; 
+     margin-left: 20px;
+   }
+   #menu ul.sub-menus {
+     height: auto;
+     overflow: hidden;
+     width: 170px;
+     background: #8E8E8E;
+     position: absolute;
+     z-index: 99;
+     display: none;
+   }
+   #menu ul.sub-menus li {
+     display: block;
+     text-align: left;
+     width: 100%;
+   }
+   #menu ul.sub-menus a {
+     color: #FFFFFF;
+     font-size: 16px;
+   }
+   #menu li:hover ul.sub-menus {
+     display: block
+   }
+   #menu ul.sub-menus a:hover{
+     background: #F2F2F2;
+     color: #444444;
+   }
+   @media screen and (max-width: 800px){
+     #menu {position:relative}
+     #menu ul {background:#8E8E8E;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+     #menu ul.sub-menus {width:100%;position:static;}
+     #menu ul.sub-menus a {padding-left:30px;}
+     #menu li {display:block;float:none;width:auto;}
+     #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+     #menu input {z-index:4}
+     #menu input:checked + label {color:#000000}
+     #menu input:checked + label:before {content:"\00d7"}
+     #menu input:checked ~ ul {display:block}
+   }
+
+
+ 
+
+
+.nav-container {
+ display: flex; 
+ align-items: center;  
+}
+.main-image {
+ margin-right: 20px;  
+} 
+
+
+/* Menu Link Hover Styles */
+#menu a.menu__link {
+   transition: color 0.3s ease, background-color 0.3s ease;
+   position: relative;
+}
+
+#menu a.menu__link:hover {
+ color: #CFE6EE;
+   background-color: #5C81D9;
+   padding: 10px 20px; /* Add padding to increase the size of the background */
+  
+}
+
+
+#menu a.menu__link::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   width: 100%;
+   height: 3px;
+   background-color: #CFE6EE;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform 0.3s ease;
+}
+
+#menu a.menu__link:hover::before {
+   transform: scaleX(1);
+}
+
+
+
+.new_footer_area {
+    background: #fbfbfd;
+    position: relative;
+    min-height: 100%;
+}
+
+.new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+a:hover,
+a:focus,
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.ti-facebook:before {
+    content: "\e741";
+}
+
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+
+.ti-pinterest:before {
+    content: "\e731";
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    color: #fff;
+}
+
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+
+.f_600 {
+    font-weight: 600;
+}
+
+.f_size_18 {
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #4b505e;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+@-moz-keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: #fbfbfd;
+
+
+      }
+      .aboutus-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutus-aboutus {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.aboutus-text {
+  top: 138px;
+  left: 818px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.aboutus-text02 {
+  top: 138px;
+  left: 952px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+
+.aboutus-text04 {
+  top: 138px;
+  left: 1089px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.aboutus-rectangle455 {
+  top: 123px;
+  left: 1194px;
+  width: 175px;
+  height: 52px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.aboutus-text06 {
+  top: 138px;
+  left: 1259px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.aboutus-rectangle465 {
+  top: 362px;
+  left: 914px;
+  width: 408px;
+  height: 461px;
+  position: absolute;
+  border-radius: 200px 200px 0 0;
+  transition: transform 0.3s ease;
+
+}
+
+.aboutus-rectangle465:hover {
+        transform: scale(1.05);
+    }
+
+
+.aboutus-text08 {
+  top: 269px;
+  left: 117px;
+  color: rgba(65, 112, 182, 1);
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.aboutus-text10 {
+  top: 388px;
+  left: 127px;
+  color: rgba(0, 0, 0, 1);
+  width: 610px;
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  opacity: 0;
+        animation: fadeIn 1s forwards;
+
+
+}
+
+@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+
+.aboutus-frame3339 {
+  gap: 30px;
+  top: 953px;
+  left: 0px;
+  width: 1440px;
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.aboutus-rectangle472 {
+    width: 666px;
+  height: 864px;
+  border-radius: 0 200px;
+  padding-left: 5%;
+  transition: filter 0.3s ease;
+
+}
+
+
+.aboutus-rectangle472:hover {
+    filter: grayscale(100%);
+
+}
+
+.aboutus-rectangle473 {
+  width: 666px;
+  height: 864px;
+  z-index: 1;
+  border-radius: 0 200px;
+  transition: filter 0.3s ease;
+
+}
+
+
+.aboutus-rectangle473:hover {
+    filter: grayscale(100%);
+
+}
+
+.aboutus-rectangle471 {
+  width: 1440px;
+  height: 494px;
+  z-index: 2;
+}
+.aboutus-text21 {
+  top: 393px;
+  left: 1014px;
+  color: rgba(65, 112, 182, 1);
+  height: auto;
+  z-index: 3;
+  position: absolute;
+  font-size: 48px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.aboutus-rectangle466 {
+  top: 89px;
+  left: 95px;
+  width: 553px;
+  height: 242px;
+  z-index: 4;
+  position: absolute;
+}
+.aboutus-text23 {
+  top: 484px;
+  left: 95px;
+  color: rgba(0, 0, 0, 1);
+  width: 610px;
+  height: auto;
+  z-index: 5;
+  position: absolute;
+  font-size: 25px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.aboutus-text25 {
+    top: 470px;
+    left: 850px;
+    color: rgba(0, 0, 0, 1);
+    width: 525px;
+    height: auto;
+    z-index: 6;
+    position: absolute;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif; /* Change font to Roboto */
+    font-weight: 300; /* You can adjust the font weight as needed */
+    line-height: normal;
+    font-style: normal;
+    text-align: left;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.aboutus-rectangle467 {
+  top: 45px;
+  left: 924px;
+  width: 285px;
+  height: 290px;
+  z-index: 7;
+  position: absolute;
+}
+.aboutus-text27 {
+  top: 398px;
+  left: 278px;
+  color: rgba(65, 112, 182, 1);
+  height: auto;
+  z-index: 8;
+  position: absolute;
+  font-size: 48px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+
+
+</style>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <div id="preloader"></div>
+
+ <!-- Navigation Menu -->
+ <nav id='menu'>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <!-- Menu Links -->
+    <ul>
+      <li><a class="menu__link" href="homepageNew.html">Home</a></li>
+      <li><a class="menu__link" href="aboutUSnew.html">About Us</a></li>
+      <li><a class="menu__link" href="FAQs.html">FAQs</a></li>
+      <li><a class="menu__link" href="login.html">Login</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./aboutus.css" rel="stylesheet" />
+
+     
+         
+        <img
+            src="public/external/rectangle4651243-qi2-500w.png"
+            alt="Rectangle4651243"
+            class="aboutus-rectangle465"
+          /> 
+          <span class="aboutus-text08"><span>About us</span></span>
+          <span class="aboutus-text10">
+            <span>
+              <span>
+                Welcome to CareerBridge, where your professional journey takes
+                center stage! At CareerBridge, we believe in empowering students
+                and alumni to navigate the dynamic landscape of the corporate
+                world with confidence and competence.
+              </span>
+              <br />
+              <span></span>
+              <br />
+              <span>
+                CareerBridge is not just a platform; it's your catalyst for
+                success. Whether you're crafting a standout CV, exploring
+                diverse career paths, or connecting with industry professionals,
+                we're here to guide and support you every step of the way.
+              </span>
+              <br />
+              <span>
+                Embark on your journey with CareerBridge — Where Careers Take
+                Flight!
+              </span>
+              <br />
+              <span></span>
+            </span>
+          </span>
+          <div class="aboutus-frame3339">
+            <img
+              src="public/external/rectangle4721632-cux-700w.png"
+              alt="Rectangle4721632"
+              class="aboutus-rectangle472"
+            />
+            <img
+              src="public/external/rectangle4731632-t3br-700w.png"
+              alt="Rectangle4731632"
+              class="aboutus-rectangle473"
+            />
+       <!--    <img
+              src="public/external/rectangle4711552-cg4-1500w.png"
+              alt="Rectangle4711552"
+              class="aboutus-rectangle471"
+            />  --> 
+            <span class="aboutus-text21"><span>Vision</span></span>
+            <img
+              src="public/external/rectangle4661243-rs26-300h.png"
+              alt="Rectangle4661243"
+              class="aboutus-rectangle466"
+            />
+            <span class="aboutus-text23">
+              <span>
+                To bridge the gap between academic excellence and career success
+                by providing a comprehensive platform that fosters skill
+                development, mentorship, and seamless connections to invaluable
+                resources.
+              </span>
+            </span>
+            <span class="aboutus-text25"  >
+              <span>
+                At CareerBridge, we envision a future where every university
+                student and alum not only graduates with knowledge but steps
+                confidently into the professional world equipped with skills,
+                connections, and a clear path for success. We aspire to be the
+                catalyst that transforms academic achievements into thriving
+                careers, creating a global community of empowered individuals
+                shaping the future of their industries.
+              </span>
+            </span>
+            <img
+              src="public/external/rectangle4671243-qr25-300w.png"
+              alt="Rectangle4671243"
+              class="aboutus-rectangle467"
+            />
+            <span class="aboutus-text27"><span>Mission</span></span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+        <!--  footer -->
+     
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+<footer class="new_footer_area bg_color">
+    <div class="new_footer_top">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Content Here -->
+            </div>
+        </div>
+        <div class="footer_bg">
+            <div class="footer_bg_one"></div>
+            <div class="footer_bg_two"></div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <!-- Footer Bottom Content Here -->
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-7">
+              <p class="mb-0 f_400" style="text-align: center;">© CareerBridge Inc.. 2024 </p>
+          </div>
+         
+      </div>
+  </div>
+</div>
+
+    
+</footer>
+<script>
+  var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+})
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+

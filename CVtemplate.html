@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js"></script>
+
+    <script src="source.js"></script>
+    <script src="db.js"></script>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .header {
+            margin: 2.5em 0 3em 0;
+            padding-bottom: 1.5em;
+            border-bottom: 1px solid #cccccc;
+            text-align: left;
+            font-family: Georgia;
+            color: #444;
+            padding-right: 10%;
+            padding-left: 10%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+        }
+
+        .header h1,
+        .header h2 {
+            margin: 0; 
+        }
+
+        .details {
+            text-align: right; 
+        }
+        h1 {
+            font-size: 40px;
+            font-style: bold;
+        }
+
+        h2 {
+            font-size: 20px; 
+            color: #797575;
+        }
+
+        h3 {
+            font-size: 18px; 
+            color: #797575;
+            margin-top: 5px; 
+        }
+
+        .content {
+            padding-right: 10%;
+            padding-left: 6%;
+        }
+
+        h4 {
+            text-align: left;
+            color: #797575;
+            font-size: 25px;
+        }
+
+        p {
+            color: #444444;
+            font-family: Garamond, Georgia, serif;
+            font-size: 20px;
+        }
+
+        h5 {
+            text-align: right;
+            font-size: 15px;
+            margin-top: -30px;
+        }
+
+        h4.experience {
+            text-align: left;
+            color: #797575;
+            font-size: 20px;
+        }
+
+        h6 {
+            text-align: right;
+            font-size: 15px;
+            top: 40px;
+        }
+
+        li{
+            font-family: Garamond, Georgia, serif;
+            font-size: 20px;
+            color: #444444;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="cvContent">
+     </div>
+
+    <script>
+
+        async function loadCV() {
+            try {
+                const response = await fetch('/Generate_CV', {
+                    method: 'POST',
+                });
+                const generatedCV = await response.text(); 
+                console.log("Generated in function : ", generatedCV);
+
+                const cvContainer = document.getElementById('cvContent');
+                cvContainer.innerHTML = generatedCV;
+
+              
+                const sections = generatedCV.split('#');
+
+                
+                sections.shift();
+
+                
+                const trimmedSections = sections.map(section => section.trim());
+
+              
+                const userDetails = trimmedSections[0];
+                const about = trimmedSections[1];
+                const skills = trimmedSections[2];
+                const experience = trimmedSections[3];
+                const certifications = trimmedSections[4];
+                const projects = trimmedSections[5];
+
+                
+                console.log('userDetails:', userDetails);
+                console.log('about:', about);
+                console.log('skills:', skills);
+                console.log('experience:', experience);
+                console.log('certifications:', certifications);
+                console.log('projects:', projects);
+
+                const userDetailsObj = {};
+                userDetails.split('\n').forEach(line => {
+                    const info = line.trim().replace('-', '').split(':');
+                    if (info.length === 2) {
+                        const key = info[0].trim();
+                        const value = info[1].trim();
+                        userDetailsObj[key] = value;
+                    }
+                });
+
+           
+                const fullName = userDetailsObj['Full Name'];
+                const phoneNumber = userDetailsObj['Phone Number'];
+                const email = userDetailsObj['Email'];
+                const university = userDetailsObj['University'];
+
+               
+                console.log('Full Name:', fullName);
+                console.log('Phone Number:', phoneNumber);
+                console.log('Email:', email);
+                console.log('University:', university);
+
+
+                
+            } catch (error) {
+                console.error("Error loading CV:", error);
+            }
+        }
+
+       
+        window.onload = loadCV;
+
+
+
+   
+      </script>
+      
+
+</body>
+</html>

@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Main - exported project" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+
+    <title>HomePage</title>
+    
+    <style data-tag="default-style-sheet">
+
+
+body{
+    margin: 0; /* Remove default body margin */
+
+  background: #87b2f2;
+}
+
+
+.ripple-background {
+  position: fixed; /* Position the background relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire width of the viewport */
+  height: 100%; /* Cover the entire height of the viewport */
+  z-index: -1; /* Ensure the background is behind other content */
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.medium{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.large{
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+
+.xlarge{
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+
+.xxlarge{
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px;
+}
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+
+
+
+html {
+          font-family: Inter;
+          font-size: 16px;
+        }
+  
+   /*     body {
+          font-weight: 400;
+          font-style:normal;
+          text-decoration: none;
+          text-transform: none;
+          letter-spacing: normal;
+          line-height: 1.15;
+          color: var(--dl-color-gray-black);
+          background-color: var(--dl-color-gray-white);
+  
+        } */
+
+        
+  .navigation-links1-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.navigation-links1-text1 {
+  margin-left: var(--dl-space-space-twounits);
+}
+.navigation-links1-text2 {
+  margin-left: var(--dl-space-space-twounits);
+}
+.navigation-links1-text3 {
+  margin-left: var(--dl-space-space-twounits);
+}
+.navigation-links1-text4 {
+  margin-left: var(--dl-space-space-twounits);
+}
+
+
+
+@media(max-width: 767px) {
+  .navigation-links1-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .navigation-links1-text {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .navigation-links1-text1 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .navigation-links1-text2 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .navigation-links1-text3 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .navigation-links1-text4 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+}
+.main-container {
+    width: 100%;
+  display: block;
+  overflow: auto;
+  min-height: 80vh; /* Adjust the value as needed */
+  align-items: center;
+  flex-direction: column;
+}
+.main-header {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+}
+.main-container1 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+}
+.main-image {
+  width: 62px;
+  height: 53px;
+  align-self: flex-start;
+  object-fit: cover;
+}
+.main-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 20px; /* Add padding on the left */
+}
+
+.main-container3 {
+  width: 100%;
+  height: 585px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #010103;
+}
+.main-text {
+  top: 152px;
+  left: 88px;
+  color: rgb(206, 206, 206);
+  position: absolute;
+  font-size: 48px;
+  font-family: "Inter";
+}
+.main-button {
+  top: 413px;
+  left: 157px;
+  color: #dadada;
+  width: 241px;
+  height: 55px;
+  position: absolute;
+  border-width: 0px;
+  background-color: rgb(36, 66, 221);
+}
+.main-rectangle457 {
+  top: 1px;
+  right: 2px;
+  width: 840px;
+  height: 584px;
+  position: absolute;
+}
+.main-rectangle458 {
+  top: 50px;
+  left: 600px;
+  width: 372px;
+  height: 449px;
+  position: absolute;
+  border-radius: 200px 200px 0 0;
+  opacity: 0.8;
+
+}
+.main-container4 {
+  width: 100%;
+  height: 1616px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0; 
+}
+
+.main-rectangle460 {
+  top: 705px;
+  left: 117px;
+  width: 372px;
+  height: 449px;
+  position: absolute;
+  border-radius: 0 400px 0 0;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.main-rectangle460:hover {
+  box-shadow: 0 0 40px 0 rgb(255, 255, 255); /* Add glow effect on hover */
+}
+
+
+.main-rectangle461 {
+  top: 704px;
+  left: 680px;
+  width: 372px;
+  height: 449px;
+  position: absolute;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.main-rectangle461:hover {
+  box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.7); /* Increase the blur radius for a bigger glow effect */
+}
+
+
+.main-text14 {
+  top: 1183px;
+  left: 124px;
+  position: absolute;
+}
+
+
+/* Style the main text heading */
+.main-text15 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #090082; /* Dark gray color */
+  position: relative;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Animation keyframes for slide-in effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to heading */
+.main-text15 {
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Hover effect */
+.main-text15:hover {
+  color: #ffc401; /* Change text color to red on hover */
+}
+
+
+
+
+.main-text16 {
+  font-size: 25px;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+.main-text18 {
+font-family: "Poppins", sans-serif;
+
+  font-size: 25px;
+}
+.main-text19 {
+    font-family: "Poppins", sans-serif;
+
+  font-size: 25px;
+}
+.main-text20 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text21 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text22 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text23 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text24 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text25 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text26 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text27 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text28 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text29 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text30 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+
+}
+.main-text31 {
+  font-size: 25px;
+  
+}
+.main-text32 {
+  top: 1180px;
+  left: 680px;
+  position: absolute;
+}
+
+/* Style the main text heading */
+.main-text33 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #090082; /* Dark gray color */
+  position: relative;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Animation keyframes for slide-in effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to heading */
+.main-text33 {
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Hover effect */
+.main-text33:hover {
+  color: #ffc401; /* Change text color to red on hover */
+}
+
+
+
+
+.main-text34 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.main-text36 {
+  font-size: 25px;
+}
+.main-text37 {
+  font-size: 25px;
+}
+.main-text38 {
+  font-size: 25px;
+}
+.main-text39 {
+  font-size: 25px;
+}
+.main-text40 {
+  font-size: 25px;
+}
+.main-text41 {
+  font-size: 25px;
+}
+.main-text42 {
+  font-size: 25px;
+}
+.main-text43 {
+  font-size: 25px;
+}
+.main-text44 {
+  font-size: 25px;
+}
+.main-text45 {
+  font-size: 25px;
+}
+.main-text46 {
+  font-size: 25px;
+}
+.main-text47 {
+  right: 50px;
+  bottom: 120px;
+  position: absolute;
+}
+
+/* Style the main text */
+.main-text49 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #090082; /* Dark gray color */
+  margin-top: 20px; /* Adjust spacing */
+  position: relative;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.main-text49 strong {
+  font-weight: bold; /* You can adjust the font weight of the strong text */
+}
+
+/* Animation keyframes for slide-in effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Hover effect */
+.main-text49:hover {
+  color: #ffc401; /* Change text color to red on hover */
+}
+
+
+
+
+.main-text52 {
+  font-size: 25px;
+}
+.main-text54 {
+  font-size: 25px;
+}
+.main-text55 {
+  font-size: 25px;
+}
+.main-text57 {
+  font-size: 25px;
+}
+.main-text59 {
+  font-size: 25px;
+}
+.main-text61 {
+  font-size: 25px;
+}
+.main-text62 {
+  font-size: 25px;
+}
+.main-text63 {
+  font-size: 25px;
+}
+.main-text64 {
+  font-size: 25px;
+}
+.main-text65 {
+  font-size: 25px;
+}
+.main-text66 {
+  font-size: 25px;
+}
+.main-text67 {
+  font-size: 25px;
+}
+.main-text68 {
+  font-size: 25px;
+}
+
+.main-rectangle462 {
+  top: 702px;
+  right: 129px;
+  width: 372px;
+  height: 449px;
+  position: absolute;
+  border-radius: 0 0 400px;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.main-rectangle462:hover {
+  box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.7); /* Increase the blur radius for a bigger glow effect */
+}
+
+
+
+
+
+.main-container5 {
+  height: 69px;
+  display: flex;
+  position: relative;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  flex-direction: column;
+}
+.main-nav {
+  flex: 0 0 auto;
+  left: -52px;
+  bottom: -2px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+}
+.main-nav span {
+  margin-right: 30px; /* Adjust the value to your preference */
+}
+.main-text69 {
+  color: #ffffff;
+  margin-left: 0px;
+}
+.main-text70 {
+  color: #f9f4f4;
+  margin-left: var(--dl-space-space-unit);
+}
+.main-text71 {
+  color: #f9f4f4;
+  margin-left: var(--dl-space-space-unit);
+}
+.main-text72 {
+  color: #f1ebeb;
+  margin-left: var(--dl-space-space-unit);
+}
+.main-image1 {
+  width: 162px;
+  height: 56px;
+  margin-bottom: var(--dl-space-space-twounits);
+}
+.main-separator {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 0px;
+  display: flex;
+  margin-top: var(--dl-space-space-twounits);
+  align-items: flex-start;
+  margin-left: 0px;
+  border-color: var(--dl-color-gray-900);
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 0px;
+  margin-bottom: var(--dl-space-space-twounits);
+  flex-direction: row;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.main-container6 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-icon-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-icon {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+.main-icon02 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+.main-icon04 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+
+
+
+.main-main-slider {
+    left: 42%; 
+    transform: translate(-50%, -50%);
+  top: -1580px;
+  width: 1445px;
+  height: 524px;
+  display: inline-block; 
+  position: absolute; 
+  margin-bottom: 0;
+} 
+.main-slider-slide {
+  width: 1573px;
+  height: 527px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #CBD6E7;
+}
+.main-container7 {
+  top: -3px;
+  flex: 0 0 auto;
+  left: -4px;
+  width: 689px;
+  height: 528px;
+  display: flex;
+  position: absolute;
+  transition: 0.3s;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.main-container7:hover {
+  background-color: #b4c5e4;
+}
+.main-image2 {
+  top: 7px;
+  left: 3px;
+  width: 689px;
+  height: 536px;
+  position: absolute;
+  object-fit: cover;
+}
+.main-text74 {
+  top: 72px;
+  color: #4B64A5;
+  right: -420px;
+  position: absolute;
+  font-size: 50px;
+  font-style: normal;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.main-text75 {
+  top: 187px;
+  right: -440px;
+  position: absolute;
+  font-size: 30px;
+}
+.main-text76 {
+  top: 255px;
+  right: -320px;
+  position: absolute;
+  font-size: 30px;
+}
+.main-button1 {
+  color: rgb(218, 218, 218);
+  right: -531px;
+  width: 241px;
+  bottom: 107px;
+  height: 55px;
+  position: absolute;
+  border-width: 0px;
+  background-color: rgb(36, 66, 221);
+}
+.main-icon06 {
+  top: 180px;
+  fill: #3369bb;
+  left: 750px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+}
+.main-icon08 {
+  top: 253px;
+  fill: #3369bb;
+  left: 750px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+}
+.main-slider-slide1 {
+  width: 1608px;
+  height: 558px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #D9D9D9;
+}
+.main-container8 {
+  top: -3px;
+  flex: 0 0 auto;
+  left: -4px;
+  width: 689px;
+  height: 528px;
+  display: flex;
+  position: absolute;
+  transition: 0.3s;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.main-container8:hover {
+  background-color: #b4c5e4;
+}
+.main-text77 {
+  top: 75px;
+  color: rgb(76, 75, 75);
+  right: -438px;
+  position: absolute;
+  font-size: 50px;
+  font-style: normal;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.main-text78 {
+  top: 187px;
+  right: -633px;
+  position: absolute;
+  font-size: 30px;
+}
+.main-text79 {
+  top: 255px;
+  right: -523px;
+  position: absolute;
+  font-size: 30px;
+}
+.main-image3 {
+  width: 100%;
+  height: 543px;
+  object-fit: cover;
+}
+.main-icon10 {
+  top: 180px;
+  fill: #3369bb;
+  left: 939px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+}
+.main-button2 {
+  top: 376px;
+  left: 949px;
+  color: rgb(218, 218, 218);
+  width: 241px;
+  height: 55px;
+  position: absolute;
+  border-width: 0px;
+  background-color: rgb(36, 66, 221);
+}
+.main-icon12 {
+  top: 253px;
+  fill: #3369bb;
+  left: 940px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+}
+.main-slider-pagination {
+  display: block;
+}
+@media(max-width: 1600px) {
+  .main-container4 {
+    width: 100%;
+    height: 1697px;
+  }
+  .main-text47 {
+    top: 1157px;
+    right: 3px;
+    position: absolute;
+  }
+  .main-text49 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .main-text50 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .main-text52 {
+    font-size: 25px;
+  }
+  .main-text53 {
+    font-size: 25px;
+  }
+  .main-text54 {
+    font-size: 25px;
+  }
+  .main-text55 {
+    font-size: 25px;
+  }
+  .main-text56 {
+    font-size: 25px;
+  }
+  .main-text57 {
+    font-size: 25px;
+  }
+  .main-text58 {
+    font-size: 25px;
+  }
+  .main-text59 {
+    font-size: 25px;
+  }
+  .main-text60 {
+    font-size: 25px;
+  }
+  .main-text61 {
+    font-size: 25px;
+  }
+  .main-text62 {
+    font-size: 25px;
+  }
+  .main-text63 {
+    font-size: 25px;
+  }
+  .main-text64 {
+    font-size: 25px;
+  }
+  .main-text65 {
+    font-size: 25px;
+  }
+  .main-text66 {
+    font-size: 25px;
+  }
+  .main-text67 {
+    font-size: 25px;
+  }
+  .main-text68 {
+    font-size: 25px;
+  }
+  .main-rectangle462 {
+    top: 706px;
+    right: 115px;
+  }
+  .main-main-slider {
+    width: 1426px;
+    margin-top: 0; 
+  }
+}
+@media(max-width: 767px) {
+  .main-header {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  
+  .main-image1 {
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+  .main-separator {
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+  .main-container6 {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main-text73 {
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+}
+@media(max-width: 479px) {
+  .main-header {
+    padding: var(--dl-space-space-unit);
+  }
+
+  .main-separator {
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+  .main-container6 {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main-text73 {
+    text-align: center;
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+}
+
+
+
+
+
+
+
+       
+       /* NAVIGATION */ 
+#menu {
+   
+   background: #ffffff;
+   height: 62px;
+   padding: 0 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   font-style: Regular;
+   font-family: Inter;
+
+   }
+
+
+   #menu ul, #menu li {
+     margin: 0 auto;
+     padding: 0;
+     list-style: none
+     
+   }
+   #menu ul {
+       list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   }
+   #menu li {
+       margin-right: 20px;
+   border-right: 1px solid #ccc; /* Add a right border to create dividers */
+   padding-right: 10px; /* Add padding to space out the links */
+
+
+   }
+
+   #menu li:last-child {
+   border-right: none; /* Remove border from the last link */
+}
+
+
+
+   #menu a {
+       text-decoration: none;
+   color: #333;
+   font-size: 16px;
+   font-weight: bold;
+   position: relative;
+   overflow: hidden;
+   }
+   #menu a.dropdown-arrow:after {
+     content: "\25BE";
+     margin-left: 5px;
+   }
+
+
+   
+#menu a:hover::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(240, 240, 240, 0.5);
+   z-index: -1;
+   transition: transform 0.3s ease;
+   transform: scaleX(0);
+   transform-origin: left;
+}
+
+/*
+   #menu li a:hover {
+       color: #6754e2;
+
+   } */
+
+   #menu input {
+     display: none;
+     margin: 0;
+     padding: 0;
+     height: 62px;
+     width: 100%;
+     opacity: 0;
+     cursor: pointer
+   }
+
+   #menu .logo img {
+       margin-left: 40px;
+   height: 65px;
+   width: auto;}
+
+   #menu label {
+     display: none;
+     line-height: 62px;
+     text-align: center;
+     position: absolute;
+     left: 35px
+   }
+   #menu label:before {
+     font-size: 1.6em;
+     color: #000000;
+     content: "\2261"; 
+     margin-left: 20px;
+   }
+   #menu ul.sub-menus {
+     height: auto;
+     overflow: hidden;
+     width: 170px;
+     background: #8E8E8E;
+     position: absolute;
+     z-index: 99;
+     display: none;
+   }
+   #menu ul.sub-menus li {
+     display: block;
+     text-align: left;
+     width: 100%;
+   }
+   #menu ul.sub-menus a {
+     color: #FFFFFF;
+     font-size: 16px;
+   }
+   #menu li:hover ul.sub-menus {
+     display: block
+   }
+   #menu ul.sub-menus a:hover{
+     background: #F2F2F2;
+     color: #444444;
+   }
+   @media screen and (max-width: 800px){
+     #menu {position:relative}
+     #menu ul {background:#8E8E8E;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+     #menu ul.sub-menus {width:100%;position:static;}
+     #menu ul.sub-menus a {padding-left:30px;}
+     #menu li {display:block;float:none;width:auto;}
+     #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+     #menu input {z-index:4}
+     #menu input:checked + label {color:#000000}
+     #menu input:checked + label:before {content:"\00d7"}
+     #menu input:checked ~ ul {display:block}
+   }
+
+
+ 
+
+
+.nav-container {
+ display: flex; 
+ align-items: center;  
+}
+.main-image {
+ margin-right: 20px;  
+} 
+
+
+/* Menu Link Hover Styles */
+#menu a.menu__link {
+   transition: color 0.3s ease, background-color 0.3s ease;
+   position: relative;
+}
+
+#menu a.menu__link:hover {
+ color: #CFE6EE;
+   background-color: #5C81D9;
+   padding: 10px 20px; /* Add padding to increase the size of the background */
+  
+}
+
+
+#menu a.menu__link::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   width: 100%;
+   height: 3px;
+   background-color: #CFE6EE;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform 0.3s ease;
+}
+
+#menu a.menu__link:hover::before {
+   transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+body {
+    background: #fbfbfd;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+*/
+.new_footer_area {
+   /* background: #fbfbfd; */
+    position: relative;
+    min-height: 100%;
+}
+
+.new_footer_top {
+    padding: 80px 0; /* Adjust the top and bottom padding */
+    position: relative;
+    overflow-x: hidden;
+}
+
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+a:hover,
+a:focus,
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.ti-facebook:before {
+    content: "\e741";
+}
+
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+
+.ti-pinterest:before {
+    content: "\e731";
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    color: #fff;
+}
+
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+
+.f_600 {
+    font-weight: 600;
+}
+
+.f_size_18 {
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #4b505e;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+@-moz-keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.main-button1 {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+    margin-left: 0; /* Reset default margin */
+
+}
+
+.main-button1:hover {
+    background-color: #ffffff; /* New background color on hover */
+    color: #a3a3a3; /* New text color on hover */
+    margin-left: -5px; /* Move button to the left slightly on hover */
+
+}
+
+
+
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background-color: #090082;
+    color: #383232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+        }
+
+        .banner h1 {
+            color: #fff;
+            font-size: 30px;
+    text-transform: uppercase;
+    animation: moveText 30s linear infinite;
+    margin: 0; /* Remove default margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for better visibility */
+    font-family: 'Poppins';
+        }
+
+        @keyframes moveText {
+            0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+        }
+
+        .banner::before {
+            content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://via.placeholder.com/800x300');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+    animation: slideImage 4s linear infinite;
+    border-radius: 10px; /* Match border radius with banner */
+        }
+
+        @keyframes slideImage {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+       
+        .main-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+.main-button:hover {
+    background-color: #e5e7ea; /* New background color on hover */
+    color: #545454; /* New text color on hover */
+}
+
+
+
+
+
+
+  
+
+      </style>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/animate.css@4.1.1/animate.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font"
+      />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+      />
+    </head>
+    <body>
+
+        <div class='ripple-background'>
+            <div class='circle xxlarge shade1'></div>
+            <div class='circle xlarge shade2'></div>
+            <div class='circle large shade3'></div>
+            <div class='circle mediun shade4'></div>
+            <div class='circle small shade5'></div>
+          </div>
+          
+
+
+
+          <!-- Navigation Menu -->
+          <nav id='menu'>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <!-- Menu Links -->
+            <ul>
+                <li><a class="menu__link" href="homepageNew.html">Home</a></li>
+                <li><a class="menu__link" href="aboutUSnew.html">About Us</a></li>
+                <li><a class="menu__link" href="FAQs.html">FAQs</a></li>
+                <li><a class="menu__link" href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+  
+
+<link rel="stylesheet" href="/style.css" />
+<div>
+
+  <!-- <div class="main-container"> --> 
+     
+   
+       
+    <div class="main-container3">
+      <span class="main-text">
+        <span>Empowering Futures,</span>
+        <br />
+        <span></span>
+        <span></span>
+        <span>Bridging Careers:</span>
+        <br />
+        <span></span>
+        <span>Your Journey Starts</span>
+        <br />
+        <span>with CareerBridge</span>
+        <br />
+        <span></span>
+        <span></span>
+      </span>
+      <button type="button" onclick="window.location.href='create_profile.html'" class="main-button button">Join Now</button>
+      <img
+      
+        src= "public/external/newgif.gif"
+        alt="Rectangle4578623"
+        class="main-rectangle457"
+      />
+      <img
+        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/68699826-1987-4fff-9d18-d1d5c608add7/44ecf1af-55f8-4751-890e-d89df4af2b43?org_if_sml=162958&amp;force_format=original"
+        alt="Rectangle4581062"
+        class="main-rectangle458"
+      />
+    </div>
+    <div class="main-container4">
+      <img
+        src="public/external/rectangle4601172-gxmc-500h-500h.png"
+        alt="Rectangle4601172"
+        class="main-rectangle460"
+      />
+      <img
+        src="public/external/rectangle4611172-zdgf-500h-500h.png"
+        alt="Rectangle4611172"
+        class="main-rectangle461"
+      />
+      <span class="main-text14">
+        <span class="main-text15">Career Development Ecosystem</span>
+        <br class="main-text16" />
+        <br />
+        <span class="main-text18">We seamlessly integrate with</span>
+        <br class="main-text19" />
+        <span class="main-text20">UOWD's academic</span>
+        <span class="main-text21">portals,</span>
+        <br class="main-text22" />
+        <span class="main-text23">ensuring accurate and automated</span>
+        <br class="main-text24" />
+        <span class="main-text25">extraction</span>
+        <span class="main-text26">of academic&nbsp;</span>
+        <span class="main-text27">data for</span>
+        <br class="main-text28" />
+        <span class="main-text29">CV creation, making the process</span>
+        <br class="main-text30" />
+        <span class="main-text31">efficient and error-free.</span>
+      </span>
+      <span class="main-text32">
+        <span class="main-text33">Skill Analytics</span>
+        <br class="main-text34" />
+        <br />
+        <span class="main-text36">Our platform analyzes real-time job</span>
+        <br class="main-text37" />
+        <span class="main-text38">market trends,&nbsp;</span>
+        <span class="main-text39">recommending skills</span>
+        <br class="main-text40" />
+        <span class="main-text41">based on current demand,</span>
+        <span class="main-text42">giving</span>
+        <br class="main-text43" />
+        <span class="main-text44">our users a competitive edge in the</span>
+        <br class="main-text45" />
+        <span class="main-text46">ever-evolving job landscape.</span>
+      </span>
+      <span class="main-text47">
+        <br />
+        <span class="main-text49">Integrated Career Support</span>
+        <br class="main-text50" />
+        <br />
+        <span class="main-text52">
+          Beyond CV creation, CareerBridge <br> offers a holistic career
+        </span>
+        <br class="main-text53" />
+        <span class="main-text55">development ecosystem.</span>
+        <br class="main-text56" />
+        <span class="main-text57">From access to career advisors</span>
+        <br class="main-text58" />
+        <span class="main-text59">and mentors to workshops,networking</span>
+        <br class="main-text60" />
+        <span class="main-text61">events,and a diverse</span>
+        <span class="main-text62">range of</span>
+        <br class="main-text63" />
+        <span class="main-text64">professionals, we provide a</span>
+        <br class="main-text65" />
+        <span class="main-text66">comprehensive</span>
+        <br class="main-text67" />
+        <span class="main-text68">support system.</span>
+      </span>
+      <img
+        src="public/external/rectangle4621182-nx7-500h-500h.png"
+        alt="Rectangle4621182"
+        class="main-rectangle462"
+      />
+    </div>
+
+    <div class="banner">
+        <h1> Unlock opportunities with professionally crafted CVs on our platform. <br>
+                    Your next career move starts here</h1>
+    </div>
+
+    
+    <div
+      data-thq="slider"
+      data-navigation="true"
+      data-pagination="true"
+      class="main-main-slider swiper"
+    >
+      <div data-thq="slider-wrapper" class="swiper-wrapper">
+        <div data-thq="slider-slide" class="main-slider-slide swiper-slide">
+          <div class="main-container7">
+            <img
+              src="public/external/conference-900w-600h.jpg"
+              alt="image"
+              class="main-image2"
+            />
+            <h1 class="main-text74">Career Bridge</h1>
+            <span class="main-text75">In5, Dubai Internet City</span>
+            <span class="main-text76">2:00 - 5:00 pm</span>
+            <a href="events.html">
+              <button type="button" class="main-button1 button">Read More</button>
+            </a>
+          </div>
+          <svg viewBox="0 0 1024 1024" class="main-icon06">
+            <path
+              d="M446 598l280-282-60-60-220 222-88-90-60 60zM512 86q124 0 211 87t87 211q0 62-31 142t-75 150-87 131-73 97l-32 34q-12-14-32-37t-72-92-91-134-71-147-32-144q0-124 87-211t211-87z"
+            ></path></svg
+          ><svg viewBox="0 0 1024 1024" class="main-icon08">
+            <path
+              d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM658.744 749.256l-210.744-210.746v-282.51h128v229.49l173.256 173.254-90.512 90.512z"
+            ></path>
+          </svg>
+        </div>
+        <div
+          data-thq="slider-slide"
+          class="main-slider-slide1 swiper-slide"
+        >
+          <div class="main-container8">
+            <h1 class="main-text77">Build A Pass</h1>
+            <span class="main-text78">In5, Dubai Internet City</span>
+            <span class="main-text79">2:00 - 5:00 pm</span>
+            <img
+              src="public/external/con-800h-600h.jpeg"
+              alt="image"
+              class="main-image3"
+            />
+          </div>
+          <svg viewBox="0 0 1024 1024" class="main-icon10">
+            <path
+              d="M446 598l280-282-60-60-220 222-88-90-60 60zM512 86q124 0 211 87t87 211q0 62-31 142t-75 150-87 131-73 97l-32 34q-12-14-32-37t-72-92-91-134-71-147-32-144q0-124 87-211t211-87z"
+            ></path>
+          </svg>
+          <button type="button" class="main-button2 button">
+            Read More
+          </button>
+          <svg viewBox="0 0 1024 1024" class="main-icon12">
+            <path
+              d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM658.744 749.256l-210.744-210.746v-282.51h128v229.49l173.256 173.254-90.512 90.512z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div
+        data-thq="slider-pagination"
+        class="main-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+      >
+        <div
+          data-thq="slider-pagination-bullet"
+          class="swiper-pagination-bullet swiper-pagination-bullet-active"
+        ></div>
+      </div>
+      <div data-thq="slider-button-prev" class="swiper-button-prev"></div>
+      <div data-thq="slider-button-next" class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+<script
+  defer=""
+  src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+></script>
+
+
+
+<footer class="new_footer_area bg_color">
+<div class="new_footer_top">
+  <div class="container">
+      <div class="row">
+      </div>
+  </div>
+  <div class="footer_bg">
+      <div class="footer_bg_one"></div>
+      <div class="footer_bg_two"></div>
+  </div>
+</div>
+<div class="footer_bottom">
+
+  <div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-7">
+            <p class="mb-0 f_400" style="text-align: center;">© CareerBridge Inc.. 2024 </p>
+        </div>
+       
+
+
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
