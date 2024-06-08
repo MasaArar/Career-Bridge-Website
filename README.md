@@ -1,5 +1,6 @@
 Please go to the google cloud website: https://cloud.google.com/gcp/ or search google cloud console.
 
+![image24](https://github.com/MasaArar/Career-Bridge-Website/assets/88930557/03006d23-8120-47c9-9e95-73e1d02c4c0f)
 
 Press on “Get started for free”
 
